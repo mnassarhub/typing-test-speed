@@ -52,7 +52,7 @@ h1 {
   padding: 10px;
   border-radius: 5px;
   background-color: #ffffff;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .game-container .start label{
   font-size: 18px;
@@ -138,19 +138,15 @@ h2 span {
   outline: none;
 }
 .game-container .upcoming-words {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
   min-width: 380px;
   padding: 10px;
   border-radius: 5px;
   background-color: #f3f0f0;
   color: var(--main-color);
+  flex-wrap: wrap;
 }
 .game-container .upcoming-words div {
+  display: inline-block;
   background-color: var(--main-color);
   color: #ffffff;
   font-weight: 400;
