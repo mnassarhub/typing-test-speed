@@ -20,9 +20,181 @@ main {
 }
 h1 {
   min-width: 380px;
+  height: 50px;
   font-weight: 700;
   padding: 0 10px;
   text-align: center;
   color: #ffffff;
   background-color:var(--main-color) ;
+  border-bottom: 1px solid #e0e0e0;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 380px;
+  height: calc(100vh - 100px);
+  margin: 0 auto;
+  padding: 10px;
+}
+.game-container .start {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 380px;
+  height: calc(100vh - 100px);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  visibility: hidden;
+}
+.game-container .start label{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-color);
+  padding: 10px 0;
+}
+.game-container .start select {
+  width: 380px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color);
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+.game-container .start select:focus {
+  outline: none;
+}
+.game-container .start .start-button {
+  width: 380px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  margin-top: 10px;
+}
+.game-container .start .start-button:hover {
+  background-color: #216fe4;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--main-color);
+  padding: 10px 0;
+  text-align: center;
+}
+h2 span {
+  font-size: 30px;
+  font-weight: 500;
+  color: #11ca67;
+}
+.game-container .the-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 380px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f0f0;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.game-container .input {
+  width: 100%;
+  min-width: 380px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f3f0f0;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+  border: 2px solid var(--main-color);
+  caret-color: var(--main-color);
+}
+.game-container .input:focus {
+  outline: none;
+}
+.game-container .upcoming-words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 380px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f0f0;
+  color: var(--main-color);
+}
+.game-container .upcoming-words div {
+  background-color: var(--main-color);
+  color: #ffffff;
+  font-weight: 400;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.game-container .control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-width: 380px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #f3f0f0;
+  color: var(--main-color);
+}
+.game-container .finish {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 10px 0;
+  text-align: center;
+  margin: 5px 0;
+}
+.game-container .finish .good {
+  color: var(--main-color);
+}
+.game-container .finish .bad {
+  color: #ff0000;
+}
+.footer {
+  width: 100%;
+  min-width: 380px;
+  height: 50px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 0 10px;
 }
