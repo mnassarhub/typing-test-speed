@@ -13,19 +13,19 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="favicon/apple-touch-icon.png"
+			href="icons/apple-touch-icon.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="favicon/favicon-32x32.png"
+			href="icons/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="favicon/favicon-16x16.png"
+			href="icons/favicon-16x16.png"
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link
@@ -40,7 +40,32 @@
 	</head>
 	<body>
 		<main>
-			<h1>Typing Speed Test Game</h1>
+			<h1>
+				Typing Speed Test Game
+				<span
+					><img
+						src="icons/men-gear-svgrepo-com.svg"
+						alt="settings"
+						title="settings"
+				/></span>
+			</h1>
+			<div class="setting">
+				<h2>Choose your website color</h2>
+				<div class="colors">
+					<span
+						class="default-color"
+						onclick="defaultColor = '#3b83ee'; changeColor();"
+					></span>
+					<span
+						class="second-color"
+						onclick="defaultColor = '#FF15A0'; changeColor();"
+					></span>
+					<span
+						class="third-color"
+						onclick="defaultColor = '#24FF11'; changeColor();"
+					></span>
+				</div>
+			</div>
 			<div class="game-container">
 				<div class="start">
 					<label for="Levels"

@@ -97,6 +97,8 @@ const easyArray = [
 	// 'gap',
 ];
 
+let defaultColor;
+
 const levels = {
 	easy: [easyArray, 7],
 	normal: [normalArray, 5],
@@ -115,6 +117,10 @@ const upComingWords = document.querySelector('.upcoming-words');
 const scoreSpan = document.querySelector('.score .got');
 const scoreTotalSpan = document.querySelector('.score .total');
 const message = document.querySelector('.finish');
+const settingImg = document.querySelector('h1 span img');
+const gameColorSetting = document.querySelector('.setting');
+const colorSpan = document.querySelector(`.colors-span`);
+const gameContainer = document.querySelector(`.game-container`);
 
 let defaultLevel;
 
@@ -236,4 +242,67 @@ function timer() {
 // disable paste event
 input.onpaste = () => {
 	return false;
+};
+
+// make setting section
+settingImg.onclick = () => {
+	gameColorSetting.classList.toggle('show');
+	gameContainer.classList.toggle('hide');
+};
+
+// change the website defualt color and set in local storage
+function changeColor() {
+	switch (defaultColor) {
+		case '#3b83ee':
+			document.documentElement.style.setProperty(
+				'--default-color',
+				'#3b83ee'
+			);
+			document.documentElement.style.setProperty(
+				'--default-color-hover',
+				'#2e6adb'
+			);
+			window.localStorage.setItem('color', '#3b83ee');
+			window.localStorage.setItem('hoverColor', '#2e6adb');
+			break;
+		case '#FF15A0':
+			document.documentElement.style.setProperty(
+				'--default-color',
+				'#FF15A0'
+			);
+			document.documentElement.style.setProperty(
+				'--default-color-hover',
+				'#bc2780'
+			);
+			window.localStorage.setItem('color', '#FF15A0');
+			window.localStorage.setItem('hoverColor', '#FF15A0');
+			break;
+		case '#24FF11':
+			document.documentElement.style.setProperty(
+				'--default-color',
+				'#24FF11'
+			);
+			document.documentElement.style.setProperty(
+				'--default-color-hover',
+				'#24c116'
+			);
+			window.localStorage.setItem('color', '#24FF11');
+			window.localStorage.setItem('hoverColor', '#24c116');
+			break;
+	}
+	gameColorSetting.classList.remove('show');
+	gameContainer.classList.remove('hide');
+}
+
+window.onload = () => {
+	if (window.localStorage.getItem('color')) {
+		document.documentElement.style.setProperty(
+			'--default-color',
+			window.localStorage.getItem('color')
+		);
+		document.documentElement.style.setProperty(
+			'--default-color-hover',
+			window.localStorage.getItem('hoverColor')
+		);
+	}
 };
