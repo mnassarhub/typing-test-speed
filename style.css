@@ -29,6 +29,12 @@ h1 {
   background-color:var(--default-color) ;
   border-bottom: 1px solid #e0e0e0;
 }
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
 h1 span img {
   width: 30px;
   height: 30px;
